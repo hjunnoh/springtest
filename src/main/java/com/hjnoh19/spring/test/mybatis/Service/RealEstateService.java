@@ -27,4 +27,27 @@ public class RealEstateService {
 	public List<RealEstate> getRealEstateAreaPrice(int area, int price) {
 		return realEstateRepository.selectRealEstateAreaPrice(area, price);
 	}
+	
+	public int addRealEstate(RealEstate realEstate) {
+		return realEstateRepository.insertRealEstate(realEstate);
+	}
+	
+	public int addRealEstate2(
+			int realtorId
+			,String address
+			,int area
+			,String type
+			,int price
+			,int rentPrice) {
+		return realEstateRepository.insertRealEstate2(realtorId, address, area, type, price, rentPrice);
+	}
+	
+	public int updateRealEstate(int id, String type, int price) {
+		return realEstateRepository.updateRealEstate(id, type, price);
+	}
+	
+	public int deleteRealEstate(int id) {
+		return realEstateRepository.deleteRealEstate(id);
+	}
+	
 }
