@@ -18,5 +18,10 @@ public class WeatherHistoryService {
 		return weatherHistoryRepository.selectWeatherList();
 	}
 
+	public int addWeather(Weather weather) {
+		return weatherHistoryRepository.insertWeather(weather);
+		
+	}
+
 	
 }

@@ -17,4 +17,26 @@
  		FROM
  			`weatherhistory`
  	</select>
+ 	
+ 	<insert id="insertWeather" parameterType="com.hjnoh19.spring.test.thymeleaf.domain.Weather">
+ 		INSERT INTO
+ 			`weatherhistory`
+ 		(
+ 			`date`
+ 			, `weather`
+ 			, `microDust`
+ 			, `temperatures`
+ 			, `precipitation`
+ 			, `windSpeed`
+ 		)
+ 		VALUE
+ 		(
+ 			#{date}
+ 			, #{weather}
+ 			, #{microDust}
+ 			, #{temperatures}
+ 			, #{precipitation}
+ 			, #{windSpeed}
+ 		)
+ 	</insert>
  </mapper>

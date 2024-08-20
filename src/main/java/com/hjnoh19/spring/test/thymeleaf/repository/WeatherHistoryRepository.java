@@ -11,5 +11,7 @@ public interface WeatherHistoryRepository {
 
 	public List<Weather> selectWeatherList();
 
+	public int insertWeather(Weather weather);
+
 	
 }
